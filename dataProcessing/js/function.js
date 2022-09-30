@@ -58,10 +58,6 @@ function checkForm(el) {
     }
 
     if (fail == "") {
-        function functionSuccess(data) {
-            $("#test").text(data);
-        }
-
         $(document).ready(function () {
             $.ajax({
                 url: "/pages/checkpost.php",
@@ -70,7 +66,11 @@ function checkForm(el) {
                 dataType: "html",
                 success: functionSuccess
             })
-        })
+        });
+        function functionSuccess(data) {
+            $("#test").text(data);
+            window.location("/p/checkpost.php");
+        }
     }
     return false;
 }

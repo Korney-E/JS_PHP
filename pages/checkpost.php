@@ -1,5 +1,5 @@
 <?php
-     print_r($_POST);
+//     print_r($_POST);
 
 
     $login = $_POST["login"];
@@ -15,4 +15,3 @@
     echo $passwordHash."<br>";
     echo $email."<br>";
     echo $name."<br>";
-
