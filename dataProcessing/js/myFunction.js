@@ -43,4 +43,5 @@ var spans = document.getElementsByClassName("simple-text")
 for (var i = 0; i < spans.length; i++) {
     console.log(spans[i].innerHTML);
 }
-//Выбор элемента по названию class222
+//Выбор элемента по названию class
+

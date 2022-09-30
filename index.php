@@ -14,15 +14,6 @@
         </div>
     </div>
 
-<!--  Ajax  -->
-    <a href="#" id="hide" style="display: none" onclick="return false">Скрыть картинку</a>
-    <a href="#" id="show" onclick="return false">Показать картнку</a>
-
-
-    <p id="load" style="cursor: pointer">Загрузить данные</p>
-    <div id="information"></div>
-    <img id="iconLoad" src="/img/loading.gif" style=" display: none; width: 5em" alt="">
-
 <?php
     include("blocks/footer.php")
 ?>
