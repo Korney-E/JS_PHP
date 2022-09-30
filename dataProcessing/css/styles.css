@@ -1,0 +1,6 @@
+.formError {
+    text-align: right;
+    color: red;
+    font-size: small;
+    padding-right: 40px;
+}
