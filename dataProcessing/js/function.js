@@ -58,34 +58,28 @@ function checkForm(event) {
         fail = "Имя не должно содержать цифры и символы";
         error("errorName", fail);
     }
-    //
-    // if (fail === "") {
-sendData();
 
-    // }
-    
-}
+    if (fail === "") {
+        function functionBefore (){
+            $("#information").text("Ожидание регистрации...");
+        }
+        function functionSuccess (data){
+            $("#information").text(data);
+        }
 
-function sendData(login, pass, email, name) {
-    function functionBefore (){
-        $("#information").text("Ожидание регистрации...");
-    }
-    function functionSuccess (data){
-        $("#information").text(data);
-    }
-
-    $(document).ready (function () {
-        $("#send").bind("click", function () {
+        function send (login, pass, email, name) {
             $.ajax({
                 url: "/pages/checkpost.php",
                 type: "POST",
-                data: ({login: login, password: pass, email: email, name: name}),
-                dataType: "html",
+                data: {login: login, password: pass, email: email, name: name},
+                dataType: "HTML",
                 beforeSend: functionBefore,
                 success: functionSuccess
-            })
-        })
-    })
-
+            });
+        }
+    }
 }
+
+
+
 

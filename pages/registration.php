@@ -9,8 +9,7 @@
 
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form id="main-form" onsubmit="" method="post">
-
+            <form id="main-form" onsubmit="checkForm();return false">
                 <!--Логин-->
                 <div class="row form-group mb-2">
                     <div class="col-4">
@@ -69,7 +68,6 @@
 
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <input type="submit" id="send" name="submit" value="Готово" class="btn btn-primary btn-sx">
-
                 </div>
             </form>
             <div id="information" class="text-center"></div>
