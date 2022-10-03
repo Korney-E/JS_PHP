@@ -1,20 +1,14 @@
 <?php
-//     print_r($_POST);
-//
-//if(isset($_GET['name'])):
-//         echo $_GET["name"];
-//endif;
 
-    $login = $_POST["login"];
-    $password = $_POST["pass"];
-    $email = $_POST["email"];
-    $name = $_POST["name"];
-
+    //Прием и обработка JSON
+    //Расконвертация JSON строки. Параметр true необходим чтобы создался ассоциативный массив
+    $jsonData = json_decode($_POST["dataQuery"], true);
+    //Кодировка
     $salt = "123456789101112";
-    $passwordHash = md5($password.$salt);
+    $jsonData["password"] = md5($jsonData["password"].$salt);
+    //Кодировка массива в json формат
+    $jsonStr = json_encode($jsonData);
+    var_dump($jsonStr);
 
-    echo $login."<br>";
-    echo $password."<br>";
-    echo $passwordHash."<br>";
-    echo $email."<br>";
-    echo $name."<br>";
+
+

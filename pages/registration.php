@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form id="main-form" onsubmit="checkForm();return false">
+            <form class="form-group" id="main-form" method="post" onsubmit="return false">
                 <!--Логин-->
                 <div class="row form-group mb-2">
                     <div class="col-4">

@@ -2,23 +2,29 @@
 
 // document.getElementById("main-form").addEventListener("submit", checkForm);
 
+$("document").ready(function () {
+    //Ожидание события в объекте с id feedBack
+    $("#main-form").on("submit", function () {
+        checkForm();
+    });
+});
+
+
 function error(nameId, fail) {
     document.getElementById(nameId).innerHTML = fail;
 }
 
 
 function resetError() {
-    document.getElementById("errorLogin").innerHTML = "";
+    document.getElementById("errorLogin",).innerHTML = "";
     document.getElementById("errorPassword").innerHTML = "";
     document.getElementById("errorRePassword").innerHTML = "";
     document.getElementById("errorEmail").innerHTML = "";
     document.getElementById("errorName").innerHTML = "";
 }
 
-document.getElementById("main-form").addEventListener("submit", checkForm);
 
-function checkForm(event) {
-    event.preventDefault()
+function checkForm() {
     let el = document.getElementById("main-form");
     let login = el.login.value;
     let pass = el.pass.value;
@@ -60,26 +66,49 @@ function checkForm(event) {
     }
 
     if (fail === "") {
-        function functionBefore (){
-            $("#information").text("Ожидание регистрации...");
-        }
-        function functionSuccess (data){
-            $("#information").text(data);
-        }
-
-        function send (login, pass, email, name) {
-            $.ajax({
-                url: "/pages/checkpost.php",
-                type: "POST",
-                data: {login: login, password: pass, email: email, name: name},
-                dataType: "HTML",
-                beforeSend: functionBefore,
-                success: functionSuccess
-            });
-        }
+       send(login, pass, email, name);
     }
 }
 
+function send($login, $pass, $email, $name) {
+    let arrData = {
+        "login": $login,
+        "password": $pass,
+        "email": $email,
+        "name": $name
+    }
+    let jsonStr = JSON.stringify(arrData);
+
+    $.ajax({
+        url: "/pages/checkpost.php",
+        method: "post",
+        dataType: "html",
+        data: {dataQuery: jsonStr},
+        success: function (data) {
+            console.log(data);
+        }
+    });
+}
+
+
+//
+// function functionBefore (){
+//     $("#information").text("Ожидание регистрации...");
+// }
+// function functionSuccess (data){
+//     $("#information").text(data);
+// }
+//
+// function send (login, pass, email, name) {
+//     $.ajax({
+//         url: "/pages/checkpost.php",
+//         type: "POST",
+//         data: {login: login, password: pass, email: email, name: name},
+//         dataType: "JSON",
+//         beforeSend: functionBefore,
+//         success: functionSuccess
+//     });
+// }
 
 
 
