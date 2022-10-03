@@ -1,6 +1,9 @@
 <?php
 //     print_r($_POST);
-
+//
+//if(isset($_GET['name'])):
+//         echo $_GET["name"];
+//endif;
 
     $login = $_POST["login"];
     $password = $_POST["pass"];

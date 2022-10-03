@@ -4,10 +4,12 @@
         $title = "Регистрация";
         require_once("blocks/header.php");
     ?>
+
     <div id="test"></div>
+
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form id="main-form" method="post"  onsubmit="return checkForm(this)" action="checkpost.php"  >
+            <form id="main-form" onsubmit="" method="post">
 
                 <!--Логин-->
                 <div class="row form-group mb-2">
@@ -66,9 +68,11 @@
                 </div>
 
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <input type="submit" name="submit" value="Готово" class="btn btn-primary btn-sx">
+                    <input type="submit" id="send" name="submit" value="Готово" class="btn btn-primary btn-sx">
+
                 </div>
             </form>
+            <div id="information" class="text-center"></div>
         </div>
     </div>
 

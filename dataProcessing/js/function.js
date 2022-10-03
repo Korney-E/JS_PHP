@@ -15,9 +15,11 @@ function resetError() {
     document.getElementById("errorName").innerHTML = "";
 }
 
+document.getElementById("main-form").addEventListener("submit", checkForm);
 
-function checkForm(el) {
-
+function checkForm(event) {
+    event.preventDefault()
+    let el = document.getElementById("main-form");
     let login = el.login.value;
     let pass = el.pass.value;
     let repass = el.repass.value;
@@ -56,22 +58,34 @@ function checkForm(el) {
         fail = "Имя не должно содержать цифры и символы";
         error("errorName", fail);
     }
+    //
+    // if (fail === "") {
+sendData();
 
-    if (fail == "") {
-        $(document).ready(function () {
+    // }
+    
+}
+
+function sendData(login, pass, email, name) {
+    function functionBefore (){
+        $("#information").text("Ожидание регистрации...");
+    }
+    function functionSuccess (data){
+        $("#information").text(data);
+    }
+
+    $(document).ready (function () {
+        $("#send").bind("click", function () {
             $.ajax({
                 url: "/pages/checkpost.php",
                 type: "POST",
                 data: ({login: login, password: pass, email: email, name: name}),
                 dataType: "html",
+                beforeSend: functionBefore,
                 success: functionSuccess
             })
-        });
-        function functionSuccess(data) {
-            $("#test").text(data);
-            window.location("/p/checkpost.php");
-        }
-    }
-    return false;
+        })
+    })
+
 }
 
