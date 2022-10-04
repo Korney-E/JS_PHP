@@ -4,7 +4,7 @@
 
 $("document").ready(function () {
     //Ожидание события в объекте с id feedBack
-    $("#main-form").on("submit", function () {
+    $("#main-form").off().on("submit", function () {
         checkForm();
     });
 });
@@ -51,7 +51,7 @@ function checkForm() {
     } else if (/^[0-9]+$/i.test(pass)) {
         fail = "Пароль должен содержать буквы";
         error("errorPassword", fail);
-    } else if (pass != repass) {
+    } else if (pass !== repass) {
         fail = "Пароли не совпадают";
         error("errorRePassword", fail);
     } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) !== true) {
@@ -88,6 +88,7 @@ function send($login, $pass, $email, $name) {
             console.log(data);
         }
     });
+    console.log("11111111111");
 }
 
 

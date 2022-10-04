@@ -67,14 +67,12 @@
                 </div>
 
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <input type="submit" id="send" name="submit" value="Готово" class="btn btn-primary btn-sx">
+                    <input type="submit" name="submit" value="Готово" class="btn btn-primary btn-sx">
                 </div>
             </form>
             <div id="information" class="text-center"></div>
         </div>
     </div>
-
-
 </div>
 
 <script src="/dataProcessing/js/function.js"></script>
