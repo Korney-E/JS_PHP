@@ -1,4 +1,3 @@
-<!-- // Обработка формы  -->
 <div class="container mt-8">
     <?php
         $title = "Регистрация";
@@ -74,13 +73,12 @@
         </div>
     </div>
 </div>
+<br>
 
 <script src="/dataProcessing/js/function.js"></script>
 <?php
 include("blocks/footer.php")
 ?>
-
-<!--  Обработка формы // -->
 
 
 

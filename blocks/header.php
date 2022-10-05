@@ -16,8 +16,6 @@
     <div class="text-center mb-5">
         <a href="/">Главная</a> |
         <a href="/pages/registration.php">Регистрация</a>
-        <a href="/pages/registrationPost.php">Регистрация Post</a>
-        <a href="/pages/checkpost.php">Обработка Post</a>
     </div>
 
 

@@ -1,7 +1,5 @@
 //Обработка формы
 
-// document.getElementById("main-form").addEventListener("submit", checkForm);
-
 $("document").ready(function () {
     //Ожидание события в объекте с id feedBack
     $("#main-form").off().on("submit", function () {
@@ -66,7 +64,7 @@ function checkForm() {
     }
 
     if (fail === "") {
-       send(login, pass, email, name);
+        send(login, pass, email, name);
     }
 }
 
@@ -88,28 +86,4 @@ function send($login, $pass, $email, $name) {
             console.log(data);
         }
     });
-    console.log("11111111111");
 }
-
-
-//
-// function functionBefore (){
-//     $("#information").text("Ожидание регистрации...");
-// }
-// function functionSuccess (data){
-//     $("#information").text(data);
-// }
-//
-// function send (login, pass, email, name) {
-//     $.ajax({
-//         url: "/pages/checkpost.php",
-//         type: "POST",
-//         data: {login: login, password: pass, email: email, name: name},
-//         dataType: "JSON",
-//         beforeSend: functionBefore,
-//         success: functionSuccess
-//     });
-// }
-
-
-
