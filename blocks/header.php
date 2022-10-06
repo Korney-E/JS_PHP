@@ -13,11 +13,20 @@
 </head>
 
 <header>
-    <div class="text-center mb-5">
-        <a href="/">Главная</a> |
-        <a href="/pages/registration.php">Регистрация</a>
-    </div>
+    <div class="row">
+        <div class="g-1 col-4"></div>
+        <div class="g-1 col-4 text-center mb-5">
+            <a href="/">Главная</a> |
+            <a href="/pages/registration.php">Регистрация</a>
+        </div>
+<?php
+    $loginOk = "";
+    if ($loginOk){
+        require_once("blocks/authorization.php");
+    }else {
+    }
 
+?>
 
 </header>
 <body class="d-flex flex-column h-100">

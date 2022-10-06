@@ -1,4 +1,4 @@
-<div class="container mt-8">
+<div class="container">
     <?php
         $title = "Регистрация";
         require_once("blocks/header.php");

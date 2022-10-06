@@ -4,3 +4,21 @@
     font-size: small;
     padding-right: 40px;
 }
+
+.authorization input {
+    height: 35px;
+    font-size: 11px;
+    text-align: center;
+
+
+}
+.authorization label {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.authorizationError {
+    text-align: center;
+    margin-top: -8px;
+    font-size: 15px;
+}
