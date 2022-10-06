@@ -4,8 +4,6 @@
         require_once("blocks/header.php");
     ?>
 
-    <div id="test"></div>
-
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <form class="form-group" id="main-form" method="post" onsubmit="return false">
@@ -75,7 +73,8 @@
 </div>
 <br>
 
-<script src="/dataProcessing/js/function.js"></script>
+
+<script src="/dataProcessing/js/checkRegistration.js"></script>
 <?php
 include("blocks/footer.php")
 ?>

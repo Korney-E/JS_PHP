@@ -3,6 +3,6 @@
         <span class="text-muted ">Корнейчик Е.В. &copy; 2022</span>
     </div>
 </footer>
-<script src="/dataProcessing/js/function.js"></script>
+<script src="/dataProcessing/js/checkRegistration.js"></script>
 </body>
 </html>
