@@ -19,6 +19,9 @@
 
 .authorizationError {
     text-align: center;
-    margin-top: -8px;
+    margin-top: 2px;
     font-size: 15px;
+}
+#errorAuthorization {
+    font-size: 12px;
 }

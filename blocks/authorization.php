@@ -15,17 +15,16 @@
             <div class="col-3 gx-0">
                 <input type="password" name="pass" placeholder="Введите пароль" id="password" class="form-control">
             </div>
+
+
             <div class="col-2 d-grid gap-2  mx-auto">
                 <input type="submit" name="submit" value="Войти" class="btn btn-primary btn-sx">
             </div>
 
             <div class="col-1"></div>
-            <div class="col-4 authorizationError formError" id="errorLogin"> выавы</div>
-            <div class="col-2 gx-0"></div>
-            <div class="col-4 gx-0 authorizationError formError" id="errorLogin"> выавы</div>
+            <div class="col-10 authorizationError formError" id="errorAuthorization"> </div>
             <div class="col-1"></div>
+
         </div>
     </form>
 </div>
-</div>
-
