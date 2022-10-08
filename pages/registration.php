@@ -1,7 +1,7 @@
 <div class="container">
     <?php
-        $title = "Регистрация";
-        require_once("blocks/header.php");
+    $title = "Регистрация";
+    require_once("blocks/header.php");
     ?>
 
     <div class="row">
@@ -15,7 +15,7 @@
                     <div class="col-8">
                         <input type="text" name="login" placeholder="Введите логин" id="login" class="form-control">
                     </div>
-                    <div class="formError" id="errorLogin"> </div>
+                    <div class="formError" id="errorLogin"></div>
                 </div>
 
                 <!--Пароль-->
@@ -24,9 +24,10 @@
                         <label for="password" class="form-label">password</label>
                     </div>
                     <div class="col-8">
-                        <input type="password" name="pass" placeholder="Введите пароль" id="password" class="form-control">
+                        <input type="password" name="pass" placeholder="Введите пароль" id="password"
+                               class="form-control">
                     </div>
-                    <div class="formError" id="errorPassword"> </div>
+                    <div class="formError" id="errorPassword"></div>
                 </div>
 
                 <!--Проверка пароля-->
@@ -35,10 +36,11 @@
                         <label for="repassword" class="form-label">confirm_password</label>
                     </div>
                     <div class="col-8">
-                        <input type="password" name="repass" placeholder="Повторите пароль" id="repassword" class="form-control">
+                        <input type="password" name="repass" placeholder="Повторите пароль" id="repassword"
+                               class="form-control">
                     </div>
 
-                    <div class="formError" id="errorRePassword"> </div>
+                    <div class="formError" id="errorRePassword"></div>
                 </div>
 
                 <!--E-mail-->
@@ -49,7 +51,7 @@
                     <div class="col-8">
                         <input type="email" name="email" placeholder="Введите E-mail" id="email" class="form-control">
                     </div>
-                    <div class="formError" id="errorEmail"> </div>
+                    <div class="formError" id="errorEmail"></div>
                 </div>
 
                 <!--Имя-->
@@ -60,7 +62,7 @@
                     <div class="col-8">
                         <input type="text" name="name" placeholder="Введите имя" id="name" class="form-control">
                     </div>
-                    <div class="formError" id="errorName"> </div>
+                    <div class="formError" id="errorName"></div>
                 </div>
 
                 <div class="d-grid gap-2 col-6 mx-auto">

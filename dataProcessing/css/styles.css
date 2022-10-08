@@ -9,9 +9,8 @@
     height: 35px;
     font-size: 11px;
     text-align: center;
-
-
 }
+
 .authorization label {
     margin-top: 5px;
     font-size: 15px;
@@ -22,6 +21,7 @@
     margin-top: 2px;
     font-size: 15px;
 }
+
 #errorAuthorization {
     font-size: 12px;
 }
