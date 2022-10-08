@@ -52,7 +52,7 @@ $("document").ready(function () {
         let jsonStr = JSON.stringify(arrData);
 
         $.ajax({
-            url: "/pages/checkAuthorization.php",
+            url: "/dataProcessing/php/checkAuthorization.php",
             method: "post",
             dataType: "html",
             data: {dataQuery: jsonStr},

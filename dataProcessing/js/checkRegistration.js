@@ -78,7 +78,7 @@ function send($login, $pass, $email, $name) {
     let jsonStr = JSON.stringify(arrData);
 
     $.ajax({
-        url: "/pages/checkpost.php",
+        url: "/dataProcessing/php/checkRegistration.php",
         method: "post",
         dataType: "html",
         data: {dataQuery: jsonStr},
