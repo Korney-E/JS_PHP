@@ -1,4 +1,3 @@
-<div class="row col-4 g-1">
     <form class="form-group" id="authorization-form" method="post" onsubmit="return false">
         <div class="authorization row form-group mb-2">
             <!--Логин-->
@@ -6,14 +5,14 @@
                 <label for="login" class="form-label">login</label>
             </div>
             <div class="col-4">
-                <input type="text" name="login" placeholder="Введите логин" id="login" class="form-control">
+                <input type="text" name="loginAuthorization" placeholder="Введите логин" id="loginAuthorization" class="form-control">
             </div>
             <!--Пароль-->
             <div class="col-2 gx-0">
                 <label for="password" class="form-label">password</label>
             </div>
             <div class="col-3 gx-0">
-                <input type="password" name="pass" placeholder="Введите пароль" id="password" class="form-control">
+                <input type="password" name="passAuthorization" placeholder="Введите пароль" id="passwordAuthorization" class="form-control">
             </div>
 
 
@@ -27,4 +26,3 @@
 
         </div>
     </form>
-</div>

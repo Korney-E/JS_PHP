@@ -73,11 +73,12 @@
 </div>
 <br>
 
+<script type="text/javascript">
+    document.getElementById("authorizationBlocHeader").innerHTML = ""
+</script>
 
-<script src="/dataProcessing/js/checkRegistration.js"></script>
 <?php
 include("blocks/footer.php")
 ?>
-
 
 

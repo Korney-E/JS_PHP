@@ -84,13 +84,12 @@ function send($login, $pass, $email, $name) {
         data: {dataQuery: jsonStr},
         success: function (data) {
             if (data === "Такой логин существует"){
-                error("errorLogin", data);
-                console.log("Hello people")
-            }else {
+                error("errorLogin", "Такой логин существует");
+            }
+            else {
                 alert("Вы успешно зарегистрировались! Через 5 секунд будет произведено перенаправление на главную страницу")
                 window.setTimeout(function() { window.location = '../../index.php'; }, 5000);
             }
-            console.log(data);
         }
     });
 }

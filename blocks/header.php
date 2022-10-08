@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="/dataProcessing/css/styles.css">
+    <script src="/dataProcessing/js/jquery_3.6.1.js"></script>
     <title><?= $title ?></title>
 </head>
 
@@ -19,14 +20,15 @@
             <a href="/pages/registration.php">Регистрация</a>
         </div>
 
+    <div class="row col-4 g-1" id="authorizationBlocHeader">
         <?php
-            $loginOk = "z";
-            if ($loginOk){
-                require_once("blocks/authorization.php");
-            }else {
-            }
-
+        require_once("blocks/authorization.php");
         ?>
+
+        <?php
+        require_once("blocks/authorizationOk.php");
+        ?>
+    </div>
 
     </div>
 </header>

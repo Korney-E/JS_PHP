@@ -4,8 +4,9 @@
     </div>
 </footer>
 
-<script src="/dataProcessing/js/jquery_3.6.1.js"></script>
 <script src="/dataProcessing/js/checkAuthorization.js"></script>
+<script src="/dataProcessing/js/checkAuthorizationOk.js"></script>
+<script src="/dataProcessing/js/checkRegistration.js"></script>
 
 </body>
 </html>
