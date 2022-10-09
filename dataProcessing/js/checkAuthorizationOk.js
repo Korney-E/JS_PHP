@@ -5,10 +5,11 @@ $("document").ready(function () {
 });
 
 function checkAuthorizationOk() {
-    $("#authorization-form").show();
-    $("#authorizationOk-form").hide();
 
-    $('#authorization-form').trigger("reset");
-    document.getElementById("errorAuthorization").innerHTML = "";
-
+//     $("#authorization-form").show();
+//     $("#authorizationOk-form").hide();
+//
+//     $('#authorization-form').trigger("reset");
+//     document.getElementById("errorAuthorization").innerHTML = "";
+//
 }

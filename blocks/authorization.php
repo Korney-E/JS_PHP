@@ -28,3 +28,13 @@
 
     </div>
 </form>
+
+<?php
+echo "Статус переменной ".$_SESSION["auth"];
+$_SESSION["auth"] = 2;
+echo "Статус переменной ".$_SESSION["auth"];
+?>
+
+<?php
+include("blocks/footer.php")
+?>

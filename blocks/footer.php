@@ -7,6 +7,3 @@
 <script src="/dataProcessing/js/checkAuthorization.js"></script>
 <script src="/dataProcessing/js/checkAuthorizationOk.js"></script>
 <script src="/dataProcessing/js/checkRegistration.js"></script>
-
-</body>
-</html>

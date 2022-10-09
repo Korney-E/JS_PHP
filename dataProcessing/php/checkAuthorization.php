@@ -1,4 +1,5 @@
 <?php
+
 //    include "/dataProcessing/php/const.php";
 
 $salt = "123456789101112";
@@ -16,18 +17,15 @@ $passwordCheck = $jsonData["password"];
 $file = file_get_contents('doc/bd.json');
 // Декодируем файл json в массив
 $taskList = json_decode($file);
-
+;
 //При помощи цикла ищем совпадение логина в массиве
 for ($i = 0; $i < count($taskList); $i++) {
     foreach ($taskList[$i] as $key => $value) {
         if ($key === "login" || $key === "password") {
-            $loginValue = $value;
-
-            if ($loginValue == $loginCheck) {
+            if ($value == $loginCheck) {
                 $answerlogin = 1;
             }
-
-            if ($loginValue == md5($passwordCheck . $salt)) {
+            if ($value == md5($passwordCheck . $salt)) {
                 $answerPassword = 1;
             }
         }
@@ -49,8 +47,16 @@ if ($answerPassword == 0) {
 if ($answerPassword == 1) {
     print ("4"); //Пароль найден
 }
+
+//Сессия
+
+
 // - очищаем переменную $file
 unset($file);
+
+
+
+
 
 
 

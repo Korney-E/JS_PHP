@@ -1,6 +1,7 @@
 <div class="container">
     <?php
     $title = "Регистрация";
+    require_once("blocks/head.php");
     require_once("blocks/header.php");
     ?>
 
