@@ -1,5 +1,5 @@
 <?php
-if($_COOKIE["log"] == ""):
+if (!isset($_COOKIE["log"])):
 ?>
 
 <form class="form-group" id="authorization-form" method="post" onsubmit="return false">

@@ -24,14 +24,18 @@
         <div class="row text-center align-items-center">
             <div>
                 <h1>ТЕСТОВОЕ ЗАДАНИЕ</h1>
+                <br>
+                <br>
+                <h5><strong>Логин:</strong> LoginTest</h5>
+                <h5><strong>Пароль:</strong> 123456q</h5>
             </div>
         </div>
 
-
+        <?php
+        include("blocks/footer.php")
+        ?>
 
     </div>
-    <?php
-    include("blocks/footer.php")
-    ?>
+
 </body>
 </html>
