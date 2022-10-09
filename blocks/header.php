@@ -6,16 +6,9 @@
             <a href="/pages/registration.php">Регистрация</a>
         </div>
         <div class="row col-4 g-1" id="authorizationBlocHeader">
-            <?php if ($_SESSION['auth'] == 2): ?>
-                <?php
-                require_once("blocks/authorizationOk.php");
-                ?>
-            <?php endif; ?>
-            <?php if ($_SESSION['auth'] == 1): ?>
-                <?php
-                require_once("blocks/authorization.php");
-                ?>
-            <?php endif; ?>
+        <?php
+        require_once("blocks/authorization.php");
+        ?>
         </div>
     </div>
 </header>

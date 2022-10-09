@@ -1,3 +1,7 @@
+<?php
+if($_COOKIE["log"] == ""):
+?>
+
 <form class="form-group" id="authorization-form" method="post" onsubmit="return false">
     <div class="authorization row form-group mb-2">
         <!--Логин-->
@@ -28,13 +32,13 @@
 
     </div>
 </form>
-
 <?php
-echo "Статус переменной ".$_SESSION["auth"];
-$_SESSION["auth"] = 2;
-echo "Статус переменной ".$_SESSION["auth"];
+    else:
+?>
+<?php
+    include("blocks/authorizationOk.php");
 ?>
 
 <?php
-include("blocks/footer.php")
+    endif;
 ?>

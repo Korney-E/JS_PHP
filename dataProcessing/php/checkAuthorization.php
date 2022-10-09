@@ -1,7 +1,5 @@
 <?php
 
-//    include "/dataProcessing/php/const.php";
-
 $salt = "123456789101112";
 
 $answerlogin = 0;
@@ -32,6 +30,10 @@ for ($i = 0; $i < count($taskList); $i++) {
     }
 }
 
+if ($answerlogin == 1 && $answerPassword == 1){
+    setcookie("log", "user", time() + 3600 * 24 * 30, "/");
+}
+
 //Ответ существует или нет логин
 if ($answerlogin == 0) {
     print ("1");//Такого логина не существует.
@@ -47,16 +49,6 @@ if ($answerPassword == 0) {
 if ($answerPassword == 1) {
     print ("4"); //Пароль найден
 }
-
-//Сессия
-
-
 // - очищаем переменную $file
 unset($file);
-
-
-
-
-
-
-
+?>

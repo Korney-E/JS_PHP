@@ -1,15 +1,17 @@
 $("document").ready(function () {
     $("#authorizationOk-form").off().on("submit", function () {
-        checkAuthorizationOk();
+
+            $.ajax({
+                url: "/dataProcessing/php/exit.php",
+                method: "post",
+                cache: false,
+                data: {},
+                dataType: "html",
+                success: function (data) {
+                    document.location.reload(true);
+                }
+           });
+        });
     });
-});
 
-function checkAuthorizationOk() {
 
-//     $("#authorization-form").show();
-//     $("#authorizationOk-form").hide();
-//
-//     $('#authorization-form').trigger("reset");
-//     document.getElementById("errorAuthorization").innerHTML = "";
-//
-}

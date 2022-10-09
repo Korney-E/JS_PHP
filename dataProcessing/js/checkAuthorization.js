@@ -68,15 +68,11 @@ function send2($login, $pass) {
             }
             if (data === "24") {
                 error2("errorAuthorization", "Поздравляем Вы успешно прошли авторизацию!");
+                $(document).ready(function () {
+                    document.location.reload(true);
 
-                // $(document).ready(function () {
-                //     $("#authorization-form").hide();
-                //     $("#authorizationOk-form").show();
-                // })
+                })
             }
-            //     else
-            //     $("#authorization-form").show();
-            // $("#authorizationOk-form").hide();
         }
     });
 }

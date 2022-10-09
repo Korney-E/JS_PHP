@@ -1,15 +1,5 @@
 <?php
-session_start();
-$_SESSION["auth"];
-//echo "Статус переменной ".$_SESSION["auth"]."<br>";
-
-//echo session_id();
-//session_destroy();
-
-//    $num = (isset($_SESSION["num"])) ? $_SESSION["num"] : 0;
-//    $num++;
-//    $_SESSION["num"] = $num;
-//    echo "Session установлена установлены ".$num." раз";
+//session_start();
 //session_destroy();
 ?>
 <!doctype html>
@@ -22,17 +12,26 @@ $_SESSION["auth"];
 <?php
     include("blocks/head.php");
     $title = "Главная страница";
-    require_once("blocks/header.php");
-?>
+    ?>
 
-    <body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100">
+
+    <div class="container">
+        <?php
+            require_once("blocks/header.php");
+        ?>
+
         <div class="row text-center align-items-center">
             <div>
                 <h1>ТЕСТОВОЕ ЗАДАНИЕ</h1>
             </div>
         </div>
+
+
+
     </div>
-
-    </body>
-
+    <?php
+    include("blocks/footer.php")
+    ?>
+</body>
 </html>
