@@ -1,4 +1,4 @@
-    <div class="container">
+<div class="container">
     <?php
     $title = "Регистрация";
     require_once("../blocks/head.php");

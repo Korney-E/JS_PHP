@@ -1,7 +1,4 @@
 <?php
-
-
-
 $salt = "123456789101112";
 
 $answerlogin = 0;
@@ -16,8 +13,7 @@ $passwordCheck = $jsonData["password"];
 // Открываем файл bd.json
 $file = file_get_contents('../../doc/bd.json');
 // Декодируем файл json в массив
-$taskList = json_decode($file);
-;
+$taskList = json_decode($file);;
 
 //При помощи цикла ищем совпадение логина в массиве
 for ($i = 0; $i < count($taskList); $i++) {
@@ -33,7 +29,7 @@ for ($i = 0; $i < count($taskList); $i++) {
     }
 }
 
-if ($answerlogin == 1 && $answerPassword == 1){
+if ($answerlogin == 1 && $answerPassword == 1) {
     setcookie("log", "user", time() + 3600 * 24 * 30, "/");
 }
 //Ответ существует или нет логин
