@@ -66,11 +66,11 @@ function send2($login, $pass) {
             if (data === "13") {
                 error2("errorAuthorization", "Такого пароля и логина не существует. Зарегистрируйтесь");
             }
+
             if (data === "24") {
                 error2("errorAuthorization", "Поздравляем Вы успешно прошли авторизацию!");
                 $(document).ready(function () {
                     document.location.reload(true);
-
                 })
             }
         }

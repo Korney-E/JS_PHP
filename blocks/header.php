@@ -8,7 +8,7 @@
             <?php
                 if (isset($_COOKIE["log"])):
             ?>
-                | <a href="/pages/userPage.php">Кабинет пользователя</a>
+                | <a href="/pages/userpage.php">Кабинет пользователя</a>
             <?php
                 endif;
             ?>
@@ -16,7 +16,7 @@
         </div>
         <div class="row col-4 g-1" id="authorizationBlocHeader">
         <?php
-        require_once("blocks/authorization.php");
+        require(dirname(__FILE__)."/authorization.php");
         ?>
         </div>
     </div>

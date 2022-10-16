@@ -1,8 +1,8 @@
-<div class="container">
+    <div class="container">
     <?php
     $title = "Регистрация";
-    require_once("blocks/head.php");
-    require_once("blocks/header.php");
+    require_once("../blocks/head.php");
+    require_once("../blocks/header.php");
     ?>
 
     <div class="row">
@@ -81,7 +81,7 @@
 </script>
 
 <?php
-include("blocks/footer.php")
+include("../blocks/footer.php")
 ?>
 
 
