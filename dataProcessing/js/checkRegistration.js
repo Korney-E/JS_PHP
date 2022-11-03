@@ -37,28 +37,37 @@ function checkForm() {
     if (login.length < 6) {
         fail = "Логин должен быть меньше 6-и символов";
         error("errorLogin", fail);
-    } else if (pass.length < 6) {
+    }else if (login.indexOf(' ') >= 0){
+        fail = "Логин не должен содержать пробелов";
+        error("errorLogin", fail);
+    }else if (pass.indexOf(' ') >= 0) {
+        fail = "Пароль не должен содержать пробелов";
+        error("errorPassword", fail);
+    }else if (pass.length < 6) {
         fail = "Пароль должен быть не меньше 6-ти символов";
         error("errorPassword", fail);
-    } else if (pass.match(/[-*#$%^&()@!~`+=_]/)) {
+    }else if (pass.match(/[-*#$%^&()@!~`+=_]/)) {
         fail = "Пароль не должен содержать спецсимволы";
         error("errorPassword", fail);
-    } else if (/^[A-ZА-ЯЁ]+$/i.test(pass)) {
+    }else if (/^[A-ZА-ЯЁ]+$/i.test(pass)) {
         fail = "Пароль должен содержать цифры";
         error("errorPassword", fail);
-    } else if (/^[0-9]+$/i.test(pass)) {
+    }else if (/^[0-9]+$/i.test(pass)) {
         fail = "Пароль должен содержать буквы";
         error("errorPassword", fail);
-    } else if (pass !== repass) {
+    }else if (pass !== repass) {
         fail = "Пароли не совпадают";
         error("errorRePassword", fail);
-    } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) !== true) {
+    }else if (email.indexOf(' ') >= 0) {
+        fail = "E-mail не должен содержать пробелов";
+        error("errorEmail", fail);
+    }else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) !== true) {
         fail = "Введите корректный email";
         error("errorEmail", fail);
-    } else if (name.length < 2) {
+    }else if (name.length < 2) {
         fail = "Имя не должно быть меньше 2-х символов";
         error("errorName", fail);
-    } else if (!/^[a-zA-ZА-Яа-яЁё]*$/g.test(document.getElementById("name").value)) {
+    }else if (!/^[a-zA-ZА-Яа-яЁё]*$/g.test(document.getElementById("name").value)) {
         fail = "Имя не должно содержать цифры и символы";
         error("errorName", fail);
     }
