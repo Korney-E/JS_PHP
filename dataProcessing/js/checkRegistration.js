@@ -92,9 +92,12 @@ function send($login, $pass, $email, $name) {
         dataType: "html",
         data: {dataQuery: jsonStr},
         success: function (data) {
-            if (data === "Такой логин существует") {
+            console.log(data)
+            if (data !== "" && JSON.parse(data) === "Такой логин существует") {
                 error("errorLogin", "Такой логин существует");
+                console.log("!!!!!!!!!!!!!!!!");
             } else {
+                console.log("222222222222")
                 alert("Вы успешно зарегистрировались! Через 5 секунд будет произведено перенаправление на главную страницу")
                 window.setTimeout(function () {
                     window.location = '../../index.php';

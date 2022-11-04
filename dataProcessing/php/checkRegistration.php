@@ -1,7 +1,6 @@
 <?php
 $salt = "123456789101112";
 
-$answer = "";
 
 //Прием и обработка JSON
 //Расконвертация JSON строки. Параметр true необходим чтобы создался ассоциативный массив
@@ -20,8 +19,7 @@ for ($i = 0; $i < count($taskList); $i++) {
         if ($key == "login") {
             $loginValue = $value;
             if ($loginValue === $loginCheck) {
-                $answer = "Такой логин существует";
-                print ("Такой логин существует");
+                print (json_encode("Такой логин существует"));
                 exit();
             }
         }
