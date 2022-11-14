@@ -64,11 +64,11 @@ function checkForm() {
     }else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) !== true) {
         fail = "Введите корректный email";
         error("errorEmail", fail);
-    }else if (name.length < 2) {
-        fail = "Имя не должно быть меньше 2-х символов";
-        error("errorName", fail);
     }else if (!/^[a-zA-ZА-Яа-яЁё]*$/g.test(document.getElementById("name").value)) {
         fail = "Имя не должно содержать цифры и символы";
+        error("errorName", fail);
+    }else if (name.length < 2 || name.length > 2) {
+        fail = "Имя должно быть равно 2-м буквам";
         error("errorName", fail);
     }
 
@@ -95,13 +95,12 @@ function send($login, $pass, $email, $name) {
             console.log(data)
             if (data !== "" && JSON.parse(data) === "Такой логин существует") {
                 error("errorLogin", "Такой логин существует");
-                console.log("!!!!!!!!!!!!!!!!");
             } else {
-                console.log("222222222222")
-                alert("Вы успешно зарегистрировались! Через 5 секунд будет произведено перенаправление на главную страницу")
-                window.setTimeout(function () {
-                    window.location = '../../index.php';
-                }, 5000);
+                window.location = '/index.php';
+                // alert("Вы успешно зарегистрировались! Через 5 секунд будет произведено перенаправление на главную страницу")
+                // window.setTimeout(function () {
+                //     window.location = '/index.php';
+                // }, 5000);
             }
         }
     });

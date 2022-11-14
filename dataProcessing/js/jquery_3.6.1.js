@@ -7838,7 +7838,6 @@
                         timers.splice(index, 1);
                     }
                 }
-
                 // Start the next in the queue if the last step wasn't forced.
                 // Timers currently will call their complete callbacks, which
                 // will dequeue but only if they were gotoEnd.
